@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique Fotografia - Contato</title>
+    <link rel="stylesheet" type='text/css' href="css/contato.css" >
+    <link rel="icon" href="img/logo redondo png.png">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main class="conteudo">
+        <section class="conteudo-banner">
+            <div class="conteudo-banner-texto">
+                <h1 class="conteudo-banner-texto-titulo">Do que você precisa?</h1>
+                <h3 class="conteudo-banner-texto-descricao">Faça seu pedido de orçamento por aqui! Te atenderei em até 24 horas! <br> E para uma resposta mais ágil, meu Whatsapp está disponível pra você atráves do botão no canto da sua tela!</h3>
+            </div>
+            <div class="conteudo-banner-form">
+                <form action="" method="post">
+                    <h3 class="conteudo-banner-form-titulo">Entre em contato comigo!</h3>
+                    <fieldset class="form">
+                        <div class="form-pergunta">
+                            <label for="nome" class="form-label">Como devo te chamar?</label>
+                            <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" class="form-input">
+                        </div>
+                        <div class="form-pergunta">
+                            <label for="email" class="form-label">Como chego até você?</label>
+                            <input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail" required class="form-input">
+                        </div>
+                        <div class="form-pergunta">
+                            <label for="assunto" class="form-label">Sobre o que deseja conversar?</label>
+                            <input type="text" name="assunto" id="assunto" placeholder="Digite o assunto" class="form-input">
+                        </div>
+                        <div class="form-pergunta">
+                            <label for="mensagem" class="form-label">Por favor, me fale um pouco mais sobre isso</label>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" required placeholder="Digite sua mensagem" class="form-input"></textarea>
+                        </div>
+                        <div>
+                            <button class="form-botao">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <%- include('../partials/botao') %>
+    </main>
+    <footer class="rodape">
+        <section class="rodape-copy">
+            <p>COPYRIGHT © 2022 - Israel Oliveira </p>
+        </section>
+    </footer>
+</body>
+</html>
