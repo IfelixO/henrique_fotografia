@@ -1,4 +1,4 @@
-const inicio = document.getElementById('inicio')
+//cabeçalho
 const cabecalhoBotao = document.getElementById('cabecalho-botao')
 const cabecalhoNav = document.getElementById('cabecalho-nav')
 const linha1 = document.getElementById('linha1')
@@ -29,4 +29,3 @@ function esconderNav () {
 
 
 cabecalhoBotao.addEventListener ('click', mostrarNav )
-inicio.setAttribute('class', 'nav-atual')

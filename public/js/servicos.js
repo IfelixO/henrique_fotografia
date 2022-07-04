@@ -19,6 +19,12 @@ const blocoPrewed = document.getElementById('servicos-prewed')
 const blocoGestantes = document.getElementById('servicos-gestantes')
 const blocoEnsaios = document.getElementById('servicos-ensaios')
 const blocoEventos = document.getElementById('servicos-eventos')
+// cabeçalho
+const cabecalhoBotao = document.getElementById('cabecalho-botao')
+const cabecalhoNav = document.getElementById('cabecalho-nav')
+const linha1 = document.getElementById('linha1')
+const linha2 = document.getElementById('linha2')
+const linha3 = document.getElementById('linha3')
 
 // Funções para mostrar mais blocos
 function mostrarPri () {
@@ -32,6 +38,27 @@ function mostrarSeg () {
     console.log('terceiro saindo');
     botaoSeg.style.display = 'none';
 }
+//cabeçalho
+function mostrarNav () {
+    cabecalhoNav.style.marginRight = 0
+    console.log('mostrou')
+    cabecalhoBotao.addEventListener ('click', esconderNav )
+    cabecalhoBotao.removeEventListener ('click', mostrarNav )
+    linha1.setAttribute('class', 'linhaX1')
+    linha2.setAttribute('class', 'linhaX2')
+    linha3.setAttribute('class', 'linhaX3')
+
+}
+function esconderNav () {
+    cabecalhoNav.style.marginRight = ('-100%')
+    console.log ('escondeu')
+    cabecalhoBotao.addEventListener ('click', mostrarNav )
+    cabecalhoBotao.removeEventListener ('click', esconderNav )
+    linha1.setAttribute('class', 'linha1')
+    linha2.setAttribute('class', 'linha2')
+    linha3.setAttribute('class', 'linha3')
+}
+
 
 // Funções para filtrar tipos de ensaios
 function mostrarCasamentos () {
@@ -110,6 +137,9 @@ console.log('rodou')
 
 // Pinta o Botão Serviços na navegação do cabeçallho
 servicos.setAttribute('class', 'nav-atual')
+
+//cabeçalho
+cabecalhoBotao.addEventListener ('click', mostrarNav )
 
 // Ações dos botões de filtro
 botaoCasamentos.onclick = mostrarCasamentos
