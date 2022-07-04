@@ -26,6 +26,7 @@
 
 body {
     background-color: hsl(42, 42%, 95%);
+    overflow-x: hidden;
 }
 
 .cabecalho {
@@ -42,7 +43,8 @@ body {
 }
 
 .logo-horizontal {
-    width: 280px;
+    height: 85px;
+    max-height: 8vh;
 }
 
 .cabecalho-navegacao {
@@ -75,7 +77,9 @@ body {
 
 .linha1, .linha2, .linha3 {
     width: 32px;
+    max-width: 7vw;
     height: 4px;
+    max-height: 0.5vh;
     background-color: hsl(0, 0%, 80%);
     margin: 8px;
     transition: 0.3s;
@@ -177,6 +181,7 @@ body {
 
 .conteudo-comoFunciona-item-imagem {
     width: 70px;
+    max-width: 8vw;
 }
 
 .conteudo-depoimentos {
@@ -228,26 +233,28 @@ body {
     
 
 .conteudo-depoimentos-bloco-descricao {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .conteudo-depoimentos-bloco-autor {
-    font-size: 2.8rem;
+    font-size: 2rem;
     margin-top: 10%;
 }
 
 
 #botao-whatsapp {
     width: 50px;
+    max-width: 8vw;
 }
 
 .botao-whatsapp {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 1vw;
+    bottom: 1vh;
     padding: 30px;
     background-color: #3FC250;
     border-radius: 100%;
+    z-index: 2;
 }
 
 .rodape {
@@ -348,7 +355,7 @@ body {
 
 .conteudo-comeco-texto {
     width: 900px;
-    max-width: 50vw;
+    max-width: 70vw;
 }
 
 .conteudo-comeco-texto-chamada {
@@ -375,17 +382,20 @@ body {
 
 #imagem-comeco {
     width: 800px;
+    max-width: 80vw;
     border-radius: 25%;
 }
 
 .conteudo-lembrancas  {
     margin: 10% 20vw;
+
 }
 
 .conteudo-lembrancas-titulo {
     text-align: center;
     font-size: 5rem;
-    margin-bottom: 2%;
+    margin: 2% auto;
+    max-width: 90vw;
 }
 
 .conteudo-lembrancas-subtitulo{
@@ -400,9 +410,9 @@ body {
 
 .conteudo-lembrancas-imagens {
     display: flex;
-    /* gap: 5%; */
-    margin-top: 5%;
+    /* margin-top: 5%; */
     overflow: hidden;
+    gap: 3%;
 }
 
 .conteudo-lembrancas-imagens-bloco {
@@ -435,7 +445,7 @@ body {
 .conteudo-lembrancas-imagens-bloco-descricao {
     font-size: 1.9rem;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 
 .conteudo-atual {
@@ -448,7 +458,7 @@ body {
 
 .conteudo-atual-texto {
     width: 900px;
-    max-width: 50vw;
+    max-width: 70vw;
 }
 
 .conteudo-atual-texto-chamada {
@@ -466,7 +476,7 @@ body {
 
 .conteudo-atual-texto-descricao {
     font-size: 1.9rem;
-    margin: 5% 0;
+    margin: 10% 0;
     text-align: justify;
     line-height: 50px;
 }
@@ -505,7 +515,7 @@ body {
     font-size: 1.9rem;
     text-align: center;
     width: 900px;
-    max-width: 50vw;
+    max-width: 70vw;
     margin: 50px auto;
     line-height: 50px;
 }
@@ -657,11 +667,11 @@ body {
 }
 
 .conteudo-grade-bloco-texto-titulo {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .conteudo-grade-bloco-texto-descricao {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 5%;
 }
 
@@ -688,9 +698,23 @@ body {
 
 
 
-@media screen and (max-width: 1500px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
     :root {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     body {
@@ -711,7 +735,7 @@ body {
 
     .cabecalho-navegacao {
         position: absolute;
-        top: 7vh;
+        top: 8vh;
         right: 0px;
         min-height: 30vh;
         min-width: 30vw;
@@ -741,10 +765,71 @@ body {
         transition: 0.3s;
     }
 
+    .conteudo-comoFunciona-titulo {
+        text-align: center;
+    }
+
     .imagem-lembranca {
         transform: scale(0.7);
     }
 
+    .conteudo-grade-bloco {
+        transform: scale(0.5)
+    }
+
+    .conteudo-pessoa-descricao {
+        text-align: justify;
+    }
     
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .imagem-lembranca {
+        transform: scale(0.7);
+    }
+
+    .botao-whatsapp {
+        padding: 10px;
+        right: 5vw;
+        bottom: 5vh;
+    }
+
+    .conteudo-comeco-texto-descricao, .conteudo-atual-texto-descricao, .conteudo-pessoa-descricao {
+        line-height: 20px;
+    }
     
+    .conteudo-lembrancas  {
+        margin: 10% 0;
+    }
+
+    .conteudo-lembrancas-imagens-bloco-descricao {
+        margin-top: -50px;
+    }
+    
+    .blocos-primeiro, .blocos-segundo, .blocos-terceiro {
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    .conteudo-grade-bloco {
+        margin-top: -450px;
+    }
+
+    .conteudo-grade {
+        padding-top: 50px;
+    }
+
+    .conteudo-botao {
+        padding: 10px;   
+        position: relative;
+        bottom: 250px;
+    }
+
+    .rodape-servicos {
+        margin-top: -300px;
+    }
 }
